@@ -3,94 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation du Projet</title>
+    <title>Maquette Monte Charge - ENSISA</title>
+    
+    <!-- Vous pouvez importer la police exacte de votre poster ici (ex: Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        /* --- VARIABLES À MODIFIER SELON VOTRE POSTER --- */
+        :root {
+            --couleur-principale: #E30613; /* Rouge type INSA - À modifier */
+            --couleur-secondaire: #2C3E50; /* Gris foncé - À modifier */
+            --couleur-fond: #F4F6F7; /* Gris très clair pour le fond */
+            --couleur-texte: #333333;
+            --police-principale: 'Montserrat', sans-serif; /* Modifiez si besoin */
+        }
+        /* ----------------------------------------------- */
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: var(--police-principale);
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--couleur-fond);
+            color: var(--couleur-texte);
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
+        /* En-tête */
+        header {
+            background-color: var(--couleur-secondaire);
+            color: white;
+            width: 100%;
+            padding: 30px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #BDC3C7;
+        }
+        .etudiants {
+            font-size: 0.85rem;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Conteneur principal */
         .container {
             width: 90%;
             max-width: 600px;
-            margin-top: 20px;
+            margin-top: -20px; /* Fait remonter le conteneur sur l'en-tête */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 40px;
+        }
+
+        /* Cartes d'information */
+        .card {
             background: white;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--couleur-principale);
         }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 1.8rem;
+        .card h3 {
+            color: var(--couleur-principale);
+            margin-top: 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        p {
+        .card p, .card li {
+            font-size: 0.95rem;
             line-height: 1.6;
-            text-align: justify;
         }
-        
-        /* -- LE MASQUE CSS POUR LA VIDÉO PAYSAGE -- */
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--couleur-secondaire);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Vidéo (Masque CSS pour forcer le vertical) */
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 177.77%; /* Force le ratio vertical 9:16 pour smartphone */
-            overflow: hidden; /* Coupe tout ce qui dépasse */
+            padding-top: 177.77%; /* Ratio 9:16 */
+            overflow: hidden;
             border-radius: 8px;
-            margin: 20px 0;
             background-color: #000;
-            pointer-events: none; /* Désactive les clics pour que les gens restent sur ton site */
+            pointer-events: none;
         }
         .video-wrapper iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 350%; /* Zoom massif pour faire sortir les bords inutiles de l'écran */
+            width: 350%;
             height: 100%;
-            transform: translate(-50%, -50%); /* Centre parfaitement l'animation */
+            transform: translate(-50%, -50%);
             border: 0;
-        }
-        /* ------------------------------------------ */
-
-        .button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 0;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Maquette<br>Monte Charge</h1>
+        <h2>ENSISA INSA - République Française</h2>
+        <div class="etudiants">
+            Kuehn Aurélien - Le Roux Eva - Tavernier Agathe (N°122)
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Notre Projet</h1>
         
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/uaCW1er3VdY?autoplay=1&mute=1&loop=1&playlist=uaCW1er3VdY&controls=0&modestbranding=1&rel=0&playsinline=1" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
+        <!-- ÉTAPE 4 : CAO & ANIMATION -->
+        <div class="card" style="margin-top: 20px;">
+            <span class="badge">Étape 4 - CAO</span>
+            <h3>Modèle CAO & Animation</h3>
+            <p>Réalisation d'un modèle CAO complet intégrant tous les composants, accompagné d'une animation 3D illustrant le fonctionnement de la maquette.</p>
+            
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/uaCW1er3VdY?autoplay=1&mute=1&loop=1&playlist=uaCW1er3VdY&controls=0&modestbranding=1&rel=0&playsinline=1" 
+                    allow="autoplay; fullscreen" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
-        <p>
-            Bienvenue sur la page de notre projet. Cette animation vous présente les grandes lignes de notre conception.
-        </p>
-        <p>
-            Pour en savoir plus sur les détails techniques, vous pouvez consulter notre documentation.
-        </p>
+        <!-- ÉTAPE 1 & 2 : SOLUTIONS -->
+        <div class="card">
+            <span class="badge">Étapes 1 & 2</span>
+            <h3>Cahier des charges & Solutions</h3>
+            <p>Suite à la rédaction du cahier des charges et à l'élaboration du Diagramme FAST, les choix techniques suivants ont été arrêtés :</p>
+            <ul>
+                <li><strong>Montée / Descente :</strong> Système pignon chaîne-contre poids. Couple nécessaire faible et système autobloquant.</li>
+                <li><strong>Portes :</strong> Système poulie courroie permettant une ouverture synchronisée en sens opposés.</li>
+            </ul>
+        </div>
 
-        <a href="#" class="button">Voir la documentation complète</a>
+        <!-- CAPTEURS & GUIDAGE -->
+        <div class="card">
+            <span class="badge">Technique</span>
+            <h3>Capteurs & Guidage</h3>
+            <ul>
+                <li><strong>Guidage :</strong> Cabine sur roulements linéaires.</li>
+                <li><strong>Détection fin de course :</strong> Capteur inductif.</li>
+                <li><strong>Sécurité surcourse :</strong> Capteur à tête à galet.</li>
+            </ul>
+        </div>
+
+        <!-- ÉTAPE 5 : RÉALISATION -->
+        <div class="card">
+            <span class="badge">Étape 5 - À venir</span>
+            <h3>Prochaines étapes (Réalisation)</h3>
+            <ul>
+                <li>Impression 3D des pièces</li>
+                <li>Programmation FAO</li>
+                <li>Usinage des composants</li>
+                <li>Assemblage final de la maquette</li>
+            </ul>
+        </div>
+
     </div>
 
 </body>
