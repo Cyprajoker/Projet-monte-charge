@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Projet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .video-wrapper {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 0;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nom du Projet</h1>
+        
+        <div class="video-wrapper">
+            <video controls playsinline poster="image-miniature.jpg">
+                <source src="presentation.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+
+        <p>
+            Bienvenue sur la page de notre projet. Cette vidéo vous présente les grandes lignes de notre conception et les solutions techniques retenues.
+        </p>
+        <p>
+            Si vous souhaitez en savoir plus sur les détails de fabrication ou l'analyse fonctionnelle, n'hésitez pas à nous contacter ou à consulter le rapport complet.
+        </p>
+
+        <a href="lien-vers-rapport-ou-contact" class="button">En savoir plus</a>
+    </div>
+
+</body>
+</html>
