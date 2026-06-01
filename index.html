@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquette d'un monte charge</title>
+    <title>Présentation du Projet</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,17 +33,29 @@
             line-height: 1.6;
             text-align: justify;
         }
+        
+        /* -- LE MASQUE CSS POUR LA VIDÉO PAYSAGE -- */
         .video-wrapper {
+            position: relative;
             width: 100%;
+            padding-top: 177.77%; /* Force le ratio vertical 9:16 pour smartphone */
+            overflow: hidden; /* Coupe tout ce qui dépasse */
             border-radius: 8px;
-            overflow: hidden;
             margin: 20px 0;
+            background-color: #000;
+            pointer-events: none; /* Désactive les clics pour que les gens restent sur ton site */
         }
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
+        .video-wrapper iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 350%; /* Zoom massif pour faire sortir les bords inutiles de l'écran */
+            height: 100%;
+            transform: translate(-50%, -50%); /* Centre parfaitement l'animation */
+            border: 0;
         }
+        /* ------------------------------------------ */
+
         .button {
             display: block;
             width: 100%;
@@ -61,23 +73,24 @@
 <body>
 
     <div class="container">
-        <h1>Nom du Projet</h1>
+        <h1>Notre Projet</h1>
         
         <div class="video-wrapper">
-            <video controls playsinline poster="image-miniature.jpg">
-                <source src="presentation.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
+            <iframe 
+                src="https://www.youtube.com/embed/uaCW1er3VdY?autoplay=1&mute=1&loop=1&playlist=uaCW1er3VdY&controls=0&modestbranding=1&rel=0&playsinline=1" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <p>
-            Bienvenue sur la page de notre projet. Cette vidéo vous présente les grandes lignes de notre conception et les solutions techniques retenues.
+            Bienvenue sur la page de notre projet. Cette animation vous présente les grandes lignes de notre conception.
         </p>
         <p>
-            Si vous souhaitez en savoir plus sur les détails de fabrication ou l'analyse fonctionnelle, n'hésitez pas à nous contacter ou à consulter le rapport complet.
+            Pour en savoir plus sur les détails techniques, vous pouvez consulter notre documentation.
         </p>
 
-        <a href="lien-vers-rapport-ou-contact" class="button">En savoir plus</a>
+        <a href="#" class="button">Voir la documentation complète</a>
     </div>
 
 </body>
