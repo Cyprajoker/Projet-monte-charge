@@ -10,11 +10,11 @@
     <style>
         /* --- VARIABLES À MODIFIER SELON VOTRE POSTER --- */
         :root {
-            --couleur-principale: #9AB24C; /* Vert - À modifier si besoin */
-            --couleur-secondaire: #004067; /* Bleu ENSISA */
+            --couleur-principale: #9AB24C; /* Rouge type INSA - À modifier */
+            --couleur-secondaire: #004067; 
             --couleur-fond: #F4F6F7; /* Gris très clair pour le fond */
             --couleur-texte: #333333;
-            --police-principale: 'Montserrat', sans-serif;
+            --police-principale: 'Montserrat', sans-serif; /* Modifiez si besoin */
         }
         /* ----------------------------------------------- */
 
@@ -102,39 +102,6 @@
             margin-bottom: 10px;
         }
 
-        /* Style spécifique pour la liste de contacts */
-        .contact-list {
-            list-style: none;
-            padding-left: 0 !important;
-            margin: 15px 0 0 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .contact-list li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background-color: #F8F9FA;
-            border-radius: 6px;
-            border-left: 3px solid var(--couleur-secondaire);
-        }
-        .btn-contact {
-            display: inline-block;
-            background-color: var(--couleur-secondaire);
-            color: white !important;
-            text-decoration: none;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: background-color 0.2s ease;
-        }
-        .btn-contact:hover {
-            background-color: var(--couleur-principale);
-        }
-
         /* Vidéo (Masque CSS pour forcer le vertical) */
         .video-wrapper {
             position: relative;
@@ -143,5 +110,62 @@
             overflow: hidden;
             border-radius: 8px;
             background-color: #000;
-            pointer-events: auto; /* Modifié pour permettre l'interaction si besoin */
+            pointer-events: none;
         }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 350%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Maquette<br>Monte Charge</h1>
+        <h2>ENSISA</h2>
+        <div class="etudiants">
+            Kuehn Aurélien - Le Roux Eva - Tavernier Agathe (N°122)
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="card" style="margin-top: 20px;">
+            <h3>Bienvenue sur la page de notre projet</h3>
+            <p>Cette vidéo vous présente le fonctionnement de notre système. Si vous souhaitez en savoir plus sur les détails de fabrication ou l'analyse fonctionnelle, n'hésitez pas à nous contacter.</p>
+            
+            <ul>
+                <li><strong>Aurélien :</strong> <a href="mailto:aurelien.kuehn@uha.fr">Contact</a></li>
+                <li><strong>Eva :</strong> <a href="mailto:eva.leroux@uha.fr">Contact</a></li>
+                <li><strong>Agathe :</strong> <a href="mailto:agathe.tavernier@uha.fr">Contact</a></li>
+            </ul>
+        </div>
+            
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/uaCW1er3VdY?autoplay=1&mute=1&loop=1&playlist=uaCW1er3VdY&controls=0&modestbranding=1&rel=0&playsinline=1" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="card">
+            <span class="badge">Étape 5 - À venir</span>
+            <h3>Prochaines étapes (Réalisation)</h3>
+            <ul>
+                <li>Impression 3D des pièces</li>
+                <li>Programmation FAO</li>
+                <li>Usinage des composants</li>
+                <li>Assemblage final de la maquette</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
